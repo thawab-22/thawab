@@ -1,0 +1,2 @@
+# thawab
+     Ce système se compose de:   Systèmes de fichiers Windows.  Commandes Windows.  NET Framework.  DirectX.  Microsoft Edge.  Système Microsoft Windows.           Le système est l'un des systèmes d'exploitation utilisés par les gens du monde entier; Il est utilisé par les ordinateurs portables ou de bureau en plus des postes de travail en raison des fonctionnalités qu'il offre, et ce qui suit est une mention de certains des avantages du système d'exploitation Windows:      Ajoutez un nouveau menu de démarrage; L'entreprise a 
