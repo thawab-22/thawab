@@ -1,0 +1,44 @@
+body{
+	padding: 10;
+	margin: 0;
+	background-image: url(cv.123.jpeg);
+	background-repeat: no-repeat;
+    text-align: center ;
+    background-size: cover;
+}
+h2{
+	color: pink;
+}
+header{
+	width:auto;
+	overflow:auto;
+}
+.logo{
+	float:center;
+}
+nav{
+	float:right;
+}
+nav ul{
+	width:auto;
+	overflow:auto;
+}
+nav ul li{
+	display:inline-block;
+	list-style:normal;
+}
+nav ul li:hover{
+	border:1px solid pink;
+}
+nav ul .active{
+	border:1px solid pink;
+}
+nav ul li a {
+	text-decoration:none;
+	font-size:20px;
+	padding:50px ;
+	margin:10px;
+}
+a{
+ text-align:underline;
+} 
