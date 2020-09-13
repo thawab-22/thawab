@@ -1,0 +1,70 @@
+import java.utill.scanner;
+
+public class AbstractMatrix{
+	
+     public static void main(string[] args){
+	 double [][] scores ={
+	            {5,3,6,8,3},
+				{5,6,8,10,3}
+				};
+				system.out.ptintln(scores[1] [2]);
+				}
+		}		
+    public 	static void main(string[]args){
+     int [] [] scores = new int[2] [2];
+      
+     scores[0] [0]= 5;
+     scores[0] [1]= 6;
+	 scores[1] [0]= 7;
+	 scores[1] [1]= 8;
+	    
+	system.out.ptintln(scores[1][1]);
+     }	
+}public class Matrix{
+	 public static void main(string[] args){  
+    int a,b; 
+ system.out.ptintln("entrer premier matrice row & colomn");
+    a=0.next int();
+    b=0.next int();
+    int m,n;
+system.out.ptintln("entrer deuxieme  matrice row & colomn");
+	n=0.next int();
+	m=0.next int();
+	if (b!=m){
+system.out.ptintln("matrice addition non possible");
+	}
+	else{
+		system.out.ptintln("matrice addition possible");
+	}
+		system.out.ptintln("entrer premier matrice element");
+		int[][] first=new int [10][10];
+		for(int i=0;i<a;i++){
+			for(int j=0;j<b;j++){
+				first[i][j]=0.next int()
+			}
+		}
+system.out.ptintln("entrer premier matrice element");
+int[][] second=new int [10][10];
+for(int i=0;i<m;i++){
+  for(int j=0;j<n;j++){
+      second[i][j]=0.next int();
+  }
+}
+ system.out.ptintln("addition de deux  matrice");
+int res=0;
+for(int i=0;i<a;i++){
+ for(int j=0; j<n;j++){
+  for(int k=0;k<m;k++){
+    res=res+first[i][k]+second[k][j];
+              }
+    result[i][j]=res;
+	res=0;
+     }
+}
+for(int i=0;i<a;i++){
+	for(int j=0;j<n;j++){
+		 system.out.ptintln("%d",result[i][j]);
+	}
+	system.out.ptintln();
+	  }
+   }
