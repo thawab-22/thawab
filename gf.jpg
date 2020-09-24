@@ -1,0 +1,169 @@
+class AbstractMatrix {
+   public static void main(String[] arg) {
+    int[][] tab2D = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+    
+        int j, i = 0;
+        for (int[] tab1D : tab2D) {
+            j = 0;
+            for (int val : tab1D) {
+                System.out.println("[" + i + "][" + j + "] = " + val);
+                j++;
+            }
+            i++;
+        }
+    }
+ public class Matrice {
+    private int [][] matrice;
+    public Matrice(int [][] tab){
+        matrice = tab.clone();
+    }
+    public int getNbLignes(){
+        return matrice.length;
+    }
+    public int getNbColonnes(){
+        return matrice[0].length;
+    }
+ 
+    public void Affichage(){ 
+        for(int i=0; i<this.getNbLignes(); i++){
+            for(int j=0; j<this.getNbColonnes(); j++){
+                System.out.println("A l'indice [" +i+ "] et [" +j+ "] on a: "+matrice[i][j]);
+            }
+        }
+    }
+    //matrice somme
+    public Matrice Ajouter(Matrice autreMatrice){
+        Matrice somme = null;
+        int [][] t1;
+        t1 = matrice.clone();
+        int [][] t2;
+        t2=autreMatrice.matrice.clone();
+        int [][] s = null;
+        //t2 = matrice.clone();
+        for(int i=0;i<this.getNbLignes();i++){
+            for(int j=0;j<this.getNbColonnes();j++){
+                s[i][j] = t1[i][j] + t2[i][j];
+ 
+            }
+        }
+        somme.matrice = s.clone();
+        return somme;
+    }
+ 
+}
+}
+    public AbstractMatrix add(AbstractMatrix M) {
+    public static void main(String[] args) {
+        int l = 3, c = 3;
+        
+        // Déclarer les deux tableaux multidimensionnels
+        int[][] A = { {1, 5, 3}, {2, 4, 1} , {9, 6, 0}};
+        int[][] B = { {2, 7, 3}, {0, 9, 3} , {8, 2, 7} };
+        
+        // Déclarer la matrice somme
+        int[][] S = new int[l][c];
+        for(int i = 0; i < l; i++) {
+            for (int j = 0; j < c; j++) {
+                S[i][j] = A[i][j] + B[i][j];
+            }
+        }
+        // Afficher la matrice somme
+        System.out.println("La somme des matrices données est: ");
+        for(int i = 0; i < l; i++) {
+            for (int j = 0; j < c; j++) {
+                System.out.print(S[i][j] + "   ");
+            }
+            System.out.println();
+        }
+    }
+}
+	public AbstractMatrix multiply(AbstractMatrix M)  {
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        int lignes = 0;
+        int colonnes = 0;
+
+        // Saisie de la 1ère matrice
+       System.out.println("Saisie de la 1ere matrice :");
+
+        // On vérifie que le nombre de lignes est plus grand 
+        // que 0
+        do {
+           System.out.print("  Nombre de lignes : ");
+            lignes = scanner.nextInt();
+        } while (lignes < 1);
+
+        // On vérifie que le nombre de colonnes est plus grand 
+        // que 0
+        do {
+           System.out.print("  Nombre de colonnes : ");
+            colonnes = scanner.nextInt();
+        } while (colonnes < 1);
+
+        // Déclaration-construction de la 1ère matrice
+        double[][] mat1 = new double[lignes][colonnes];
+        for (int row = 0; row < lignes; row++) {
+            for (int col = 0; col < colonnes; col++) {
+               System.out.print("  M[" + (row + 1) + "," 
+                         + (col + 1) + "]=");
+                mat1[row][col] = scanner.nextDouble();
+            }
+        }
+
+
+        // ... et on refait la même chose pour la 2ème matrice
+       System.out.println("Saisie de la 2eme matrice :");
+        do {
+           System.out.print("  Nombre de lignes : ");
+            lignes = scanner.nextInt();
+        } while (lignes < 1);
+
+        do {
+           System.out.print("  Nombre de colonnes : ");
+            colonnes = scanner.nextInt();
+        } while (colonnes < 1);
+
+        double[][] mat2 = new double[lignes][colonnes];
+        for (int row = 0; row < lignes; row++) {
+            for (int col = 0; col < colonnes; col++) {
+               System.out.print("  M[" + (row + 1) + "," 
+                         + (col + 1) + "]=");
+                mat2[row][col] = scanner.nextDouble();
+            }
+        }
+
+        // Ici on multiplie les matrices
+        if (mat1[0].length != mat2.length) {
+           System.out.println("Multiplication de matrices " +
+                       "impossible !");
+        } else {
+            // Déclaration-construction de la matrice résultat
+            double[][] prod = 
+              new double[mat1.length][mat2[0].length];
+            for (int row = 0; row < mat1.length; row++) {
+                for (int col = 0; col < mat2[0].length; col++) {
+                    prod[row][col] = 0.0;
+                    for (int i = 0; i < mat2.length; i++) {
+                        prod[row][col] += mat1[row][i] * 
+                          mat2[i][col];
+                    }
+                }
+            }
+
+            // Affichage du résultat
+           System.out.println("Résultat :");
+            for (int row = 0; row < prod.length; row++) {
+                for (int col = 0; col < prod[row].length; col++) {
+                   System.out.print(prod[row][col] + " ");
+                }
+               System.out.println();
+            }
+        }
+    }
+}
